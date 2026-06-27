@@ -1,0 +1,26 @@
+﻿<Window x:Class="CyberChatBot.App.Views.NamePromptWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Welcome to CyberChatBot" Height="250" Width="400"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="🤖 Welcome to CyberChatBot!" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <TextBlock Grid.Row="1" Text="Please enter your name to continue:" FontSize="16" Margin="0,0,0,15"/>
+
+        <TextBox x:Name="NameTextBox" Grid.Row="2" FontSize="16" Padding="10" Margin="0,0,0,20" KeyDown="NameTextBox_KeyDown"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Enter Chat" Width="120" Height="40" Click="EnterChat_Click" Background="#2196F3" Margin="5"/>
+            <Button Content="Exit" Width="80" Height="40" Click="Exit_Click" Background="#F44336" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
